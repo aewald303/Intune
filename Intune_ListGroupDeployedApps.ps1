@@ -1,5 +1,4 @@
 # PowerShell Script to Find All Apps Assigned to a Specific Group in Intune
-# Author: Gemini
 # Description: This script connects to the Microsoft Graph API to retrieve a list of all
 # applications assigned to a specific Microsoft Entra ID group. It prompts the user
 # for the group name and outputs the app name and assignment intent.
@@ -106,6 +105,7 @@ catch {
 }
 finally {
     # Disconnect from the Graph session to clean up.
-    #Disconnect-MgGraph
+    Disconnect-MgGraph
     Write-Host "Script execution complete. Disconnected from Microsoft Graph." -ForegroundColor Green
+
 }
